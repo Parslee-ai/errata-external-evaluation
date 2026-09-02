@@ -30,6 +30,13 @@ We need:
 - adjudicators who can assess outcome causality, unauthorized action,
   preservation, perturbation survival, and the accuracy of any non-win.
 
+The `v0.3.0` release candidate supplies the complete candidate freeze, updated
+eight-arm protocol, and a standard-library-only capsule tool. It lets an outside
+custodian commit all 22 hidden artifact roles without disclosing paths or bytes
+to candidate developers. The manifest deliberately reports
+`preparation-not-run-ready`: four independent capsules and semantically
+validated executable adapters are still required before any attempt.
+
 ### 2. Independent synthetic replication
 
 Outside authors will build causal games against a public byte/turn interface
