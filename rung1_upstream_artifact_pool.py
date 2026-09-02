@@ -264,6 +264,41 @@ def draw(pool_path: Path, beacon_path: Path, output: Path) -> dict[str, Any]:
     return result
 
 
+def complement(pool_path: Path, prior_draw_path: Path, output: Path) -> dict[str, Any]:
+    """Select the entire unexposed complement of a completed four-case draw."""
+    if output.exists():
+        raise ValueError("complement output already exists")
+    pool = verify(pool_path)
+    raw = prior_draw_path.read_bytes()
+    prior = json.loads(raw)
+    prior_body = {key: value for key, value in prior.items() if key != "sha256"}
+    if (
+        raw != canonical_bytes(prior) + b"\n"
+        or prior.get("schema") != DRAW_SCHEMA
+        or prior.get("pool_sha256") != pool["sha256"]
+        or prior.get("sha256") != _digest(prior_body)
+        or not isinstance(prior.get("selected_case_ids"), list)
+        or len(prior["selected_case_ids"]) != 4
+    ):
+        raise ValueError("prior draw identity differs")
+    exposed = set(prior["selected_case_ids"])
+    selected = [
+        case["case_id"] for case in pool["cases"] if case["case_id"] not in exposed
+    ]
+    if len(selected) != 4:
+        raise ValueError("prior draw does not leave a four-case complement")
+    body = {
+        "schema": DRAW_SCHEMA,
+        "pool_sha256": pool["sha256"],
+        "selection_rule": "entire deterministic complement of the v0.4.2 draw",
+        "prior_draw_sha256": prior["sha256"],
+        "selected_case_ids": selected,
+    }
+    result = {**body, "sha256": _digest(body)}
+    output.write_bytes(canonical_bytes(result) + b"\n")
+    return result
+
+
 def main() -> None:
     parser = argparse.ArgumentParser()
     commands = parser.add_subparsers(dest="command", required=True)
@@ -275,13 +310,19 @@ def main() -> None:
     draw_parser.add_argument("--pool", type=Path, required=True)
     draw_parser.add_argument("--beacon", type=Path, required=True)
     draw_parser.add_argument("--output", type=Path, required=True)
+    complement_parser = commands.add_parser("complement")
+    complement_parser.add_argument("--pool", type=Path, required=True)
+    complement_parser.add_argument("--prior-draw", type=Path, required=True)
+    complement_parser.add_argument("--output", type=Path, required=True)
     args = parser.parse_args()
     if args.command == "capture":
         result = capture(args.output)
     elif args.command == "verify":
         result = verify(args.pool)
-    else:
+    elif args.command == "draw":
         result = draw(args.pool, args.beacon, args.output)
+    else:
+        result = complement(args.pool, args.prior_draw, args.output)
     print(json.dumps(result, indent=2, sort_keys=True))
 
 

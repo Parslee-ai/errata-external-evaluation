@@ -70,6 +70,15 @@ def _python_launcher(path: Path) -> str:
     return os.path.abspath(path)
 
 
+def _prepend_python_launcher(path: Path) -> None:
+    launcher_dir = str(Path(os.path.abspath(path)).parent)
+    current = os.environ.get("PATH", "/usr/bin:/bin")
+    entries = current.split(os.pathsep)
+    os.environ["PATH"] = os.pathsep.join(
+        [launcher_dir, *(entry for entry in entries if entry != launcher_dir)]
+    )
+
+
 def _manifest(path: Path) -> dict[str, Any]:
     root = Path(__file__).resolve().parents[1]
     manifest = verify_candidate_freeze(
@@ -666,6 +675,7 @@ def main() -> int:
 
     if args.source_repo is None or args.python is None:
         raise SystemExit("agent rows require --source-repo and --python")
+    _prepend_python_launcher(args.python)
     workspace = args.runs / f"{key['slot']:02d}-{case['case_id']}-{arm}-workspace"
     run_dir = args.runs / f"{key['slot']:02d}-{case['case_id']}-{arm}-run"
     _extract(

@@ -163,3 +163,10 @@ rescue the cohort and were not spent. The complete six-row ledger and replay
 bundle are published in v0.4.4. Four deterministic-complement cases remain
 unexposed for a repaired successor freeze. Zero outside causal-game submissions
 have been accepted.
+
+The repaired successor is now frozen as v0.5.0. It uses the entire deterministic
+complement—Flask 6093, pytest 14828, Pydantic 13716, and Pydantic 13713—with no
+second draw or discretionary subsampling. Before the freeze, a case-free
+preflight completed one fixed cognition request and one credential-free Python
+unittest inside the actual command containment. No successor ledger reservation
+or scored attempt existed at publication.

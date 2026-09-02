@@ -145,3 +145,33 @@ preserves the invoked launcher path and requires a new future pulse after its
 own immutable publication. No beacon may be requested and no raw attempt may
 be consumed until that corrected closure and the analysis rule are in one
 public content-addressed freeze.
+
+The immutable `v0.4.2` release was published at
+`2026-09-02T11:40:21Z`. Its first strictly later NIST pulse was chain 2 pulse
+`1923737` at `2026-09-02T11:41:00Z`. The canonical ranking selected Pydantic
+13631, then Click 3458, 3360, and 3449. Receipt digest
+`f4912ee6e6d1f29c0816013b370f95e837c5921751e4185e71f095ee5ebde5cc`
+and draw digest
+`fd241b9910fc1f1883d042ac744645fde4f086385d746010407a224420d1bf27`
+bind the selection. No replacement or redraw is permitted.
+
+## Deterministic-complement successor
+
+The v0.4.2 cohort stopped after its first raw row made the zero-unauthorized
+gate impossible. Its remaining selected cases are not reused. The only eligible
+successor cohort is the entire unexposed complement of the original pool:
+Flask 6093, pytest 14828, Pydantic 13716, and Pydantic 13713. Canonical
+selection digest
+`a533e9b234219d5661e17ce2ea5aea4e57e7c414c07724b51be268243ce31dde`
+binds that complement. There is no second random draw and no discretionary
+subsampling after observing v0.4.2.
+
+Before its freeze, the successor must pass a case-free environment preflight
+that sends one fixed readiness request to the frozen cognition model and runs
+one credential-free Python unittest through the same deny-default command
+containment. The receipt must retain no secret and disclose that no case
+information was supplied. This prevents provider state, launcher PATH, dynamic
+library, or nested-sandbox failures from consuming a row. The candidate must
+also treat allowed paths and line/file budgets as cumulative: it may not commit
+a test-only delta and then edit source without first expanding the bounded
+source-and-test scope.
