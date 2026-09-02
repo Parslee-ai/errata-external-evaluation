@@ -65,6 +65,7 @@ def main() -> None:
     row = json.loads(args.case.read_text(encoding="utf-8"))
     evaluator = args.evaluator.resolve(strict=True)
     sys.path.insert(0, str(evaluator))
+    sys.path.insert(0, str(evaluator / "launch"))
     from evaluation.evaluation import evaluate_instance
 
     relative = Path("preflight") / row["instance_id"] / (
