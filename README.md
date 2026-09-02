@@ -194,3 +194,9 @@ beacon receipt template still named v0.4.2. The only request returned HTTP 404
 before any pulse bytes, leaving no receipt, ranking, reservation, model attempt,
 or result. v0.6.1 corrects only that provenance rule, retains the same pool and
 candidate, and requires a new future pulse after its own immutable publication.
+
+The immutable v0.6.1 package was followed by NIST chain 2 pulse `1923983` at
+`2026-09-02T15:47:00Z`. The resulting order is Pydantic 13692, Click 3571,
+pytest 14864, and Pydantic 13687. Release v0.6.2 publishes the receipt and draw
+before any v0.6.1 reservation or model attempt. No replacement or redraw is
+permitted.
