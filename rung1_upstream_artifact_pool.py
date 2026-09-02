@@ -222,9 +222,9 @@ def draw(pool_path: Path, beacon_path: Path, output: Path) -> dict[str, Any]:
         raise ValueError("draw beacon receipt digest differs")
     if (
         beacon_value.get("rule")
-        != "first NIST Beacon 2.0 pulse strictly after the immutable v0.4.1 release publishedAt"
+        != "first NIST Beacon 2.0 pulse strictly after the immutable v0.4.2 release publishedAt"
         or beacon_value.get("release_url")
-        != "https://github.com/Parslee-ai/errata-external-evaluation/releases/tag/v0.4.1"
+        != "https://github.com/Parslee-ai/errata-external-evaluation/releases/tag/v0.4.2"
         or beacon_value.get("request_url")
         != "https://beacon.nist.gov/beacon/2.0/pulse/time/next/"
         + str(beacon_value.get("strictly_after_unix_ms"))

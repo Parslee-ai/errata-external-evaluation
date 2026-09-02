@@ -79,9 +79,9 @@ def main() -> None:
         "planned_raw_attempts": 4,
         "replacement": False,
         "beacon": {
-            "release": "v0.4.1",
+            "release": "v0.4.2",
             "source": "NIST Randomness Beacon 2.0",
-            "rule": "first pulse returned by /pulse/time/next/<v0.4.1 publishedAt unix milliseconds>",
+            "rule": "first pulse returned by /pulse/time/next/<v0.4.2 publishedAt unix milliseconds>",
             "entropy": "pulse.outputValue interpreted as 64 bytes",
             "ranking_digest": "SHA-256(entropy)",
             "no_redraw": True,

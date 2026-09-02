@@ -61,7 +61,7 @@ public beacon strictly after the freeze. The initial immutable `v0.4.0`
 publication left the beacon provider and canonical pulse bytes unspecified and
 is therefore ineligible for a draw. Its successor predeclares the NIST
 Randomness Beacon 2.0: request
-`/pulse/time/next/<v0.4.1-publishedAt-unix-milliseconds>`, require the returned
+`/pulse/time/next/<v0.4.2-publishedAt-unix-milliseconds>`, require the returned
 pulse timestamp to be strictly later, interpret the 128-hex-character
 `outputValue` as 64 entropy bytes, and set `beacon_digest` to the SHA-256 of
 those bytes. The canonical receipt retains the pulse, signature, certificate
@@ -136,8 +136,12 @@ workspaces, binds derived controls to the raw trace, runs the hidden regression
 and baseline twice on clean evaluator copies, checks aggregate budgets and
 unauthorized actions, verifies retained custody, and applies the noncompensatory
 3/4 summary. Eight requirements-only briefings are frozen separately from the
-winning patches. The runner has not yet executed a model row or established
-case-semantic control validity. The corrected public candidate/control freeze
-with the exact future NIST pulse rule remains open. No beacon may be requested
-and no raw attempt may be consumed until that closure and the analysis rule are
-in one public content-addressed freeze.
+winning patches. The runner has not yet executed a model row. Immutable
+`v0.4.1` is invalidated before the draw because its evaluator resolved the
+Python launcher symlink, discarding the virtual-environment context required by
+the frozen checks. Its intended first NIST pulse became observable, but no
+canonical receipt, case ranking, or model attempt was created. `v0.4.2`
+preserves the invoked launcher path and requires a new future pulse after its
+own immutable publication. No beacon may be requested and no raw attempt may
+be consumed until that corrected closure and the analysis rule are in one
+public content-addressed freeze.

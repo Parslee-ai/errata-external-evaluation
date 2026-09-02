@@ -65,6 +65,11 @@ def _now() -> str:
     return datetime.now(timezone.utc).isoformat()
 
 
+def _python_launcher(path: Path) -> str:
+    """Keep the invoked venv path; resolving its symlink disables venv discovery."""
+    return os.path.abspath(path)
+
+
 def _manifest(path: Path) -> dict[str, Any]:
     root = Path(__file__).resolve().parents[1]
     manifest = verify_candidate_freeze(
@@ -515,7 +520,7 @@ def _evaluate_patch(
         patch_applied = False
     env = dict(os.environ)
     env["PYTHONPATH"] = os.pathsep.join((str(evaluation / "src"), str(evaluation)))
-    prefix = [str(python.resolve()), "-m", "pytest", "-q"]
+    prefix = [_python_launcher(python), "-m", "pytest", "-q"]
     plan = PLANS[case["case_id"]]
     regression = (
         _run(prefix + list(plan.regression), cwd=evaluation, env=env)
@@ -710,7 +715,7 @@ def main() -> int:
     )
     if arm in {"no-exploration", "matched-nonlearning", "corrupted-information"}:
         plan = PLANS[case["case_id"]]
-        prefix = [str(args.python.resolve()), "-m", "pytest", "-q"]
+        prefix = [_python_launcher(args.python), "-m", "pytest", "-q"]
         engine.tools = NoExplorationExecutor(
             engine.tools,
             validation_argv=(prefix + list(plan.baseline),),

@@ -39,10 +39,14 @@ firewall without supplying or holding a case.
 
 `v0.4.0` is retained as an invalid pre-draw freeze because it did not name the
 beacon provider or canonical pulse bytes. No beacon was fetched and no case was
-selected under it. The corrected `v0.4.1` successor binds the first official
-NIST Randomness Beacon 2.0 pulse strictly after its own immutable GitHub
-publication, the exact API request, timestamp comparison, entropy field,
-ranking digest, and no-redraw rule.
+selected under it. `v0.4.1` corrected that rule but is also ineligible: a
+pre-draw audit found that its evaluator resolved the Python launcher symlink
+and would discard virtual-environment discovery. Its intended NIST pulse became
+visible, but no canonical receipt, ranking, reservation, or model attempt was
+created. The corrected `v0.4.2` successor preserves the invoked launcher path
+and binds a new first official NIST Randomness Beacon 2.0 pulse strictly after
+its own immutable GitHub publication, the exact API request, timestamp
+comparison, entropy field, ranking digest, and no-redraw rule.
 
 The immutable
 [`v0.3.0`](https://github.com/Parslee-ai/errata-external-evaluation/releases/tag/v0.3.0)
