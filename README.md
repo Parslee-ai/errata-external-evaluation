@@ -236,3 +236,11 @@ PYTHONPATH=src python3 scripts/audit_causal_program_nonenumeration_blocker.py \
 This is not a synthetic capability result and does not complete the North
 Star. Completion still requires a qualifying 3/4 Lane-A real-software result
 with zero unauthorized actions and complete deterministic replay.
+
+Lane-A v0.9 pool closure is public in immutable release v0.9.1 before any
+model row. The frozen sixteen-repository scan produced exactly two admissible
+cases—Werkzeug 3127/3129 and pip 13828/13829—and retains the complete rejection
+audit, native source/test split, deterministic selection, and requirements-only
+briefings. Both cases and all sixteen rows must execute. This cohort cannot pass
+the 3-of-4 gate; its best possible terminal disposition is the independently
+checkable shortfall of two additional eligible repositories.

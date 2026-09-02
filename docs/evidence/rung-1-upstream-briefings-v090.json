@@ -1,0 +1,4 @@
+{
+  "pallets--werkzeug--issue-3127": "The required public behavior is that a parameterless WWW-Authenticate challenge serializes without trailing whitespace and is accepted as a response header by a conforming HTTP implementation. Challenges with parameters and unrelated header behavior must remain intact. This states observable requirements only and does not identify an implementation action.",
+  "pypa--pip--issue-13828": "The required safety behavior is that once pip begins installing a distribution, an attempted Python import is rejected rather than executing package-controlled code. Imports needed before that boundary and ordinary installation behavior must remain intact. This states observable requirements only and does not identify an implementation action."
+}

@@ -1,0 +1,30 @@
+{
+  "cases": [
+    {
+      "repository": "pallets/werkzeug",
+      "issue_number": 3127,
+      "pull_number": 3129,
+      "evaluation": {
+        "baseline_pytest_targets": [
+          "tests/test_http.py::TestHTTPUtility::test_www_authenticate_token_padding"
+        ],
+        "regression_pytest_targets": [
+          "tests/test_http.py::TestHTTPUtility::test_www_authenticate_header"
+        ]
+      }
+    },
+    {
+      "repository": "pypa/pip",
+      "issue_number": 13828,
+      "pull_number": 13829,
+      "evaluation": {
+        "baseline_pytest_targets": [
+          "tests/unit/test_command_install.py::test_create_os_error_message"
+        ],
+        "regression_pytest_targets": [
+          "tests/unit/test_command_install.py::test_prevent_further_imports_warns_on_import"
+        ]
+      }
+    }
+  ]
+}
