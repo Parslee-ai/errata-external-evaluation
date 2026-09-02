@@ -262,3 +262,5 @@ Beacon pulse after immutable release v1.0.0. No task content may be inspected
 before publication and the post-release draw. This is preparation, not a
 result; fewer than four independently gold-preflighted fresh repositories stops
 as a public pool blocker without consuming an attempt.
+Immutable release v1.0.1 publishes the exact post-v1.0.0 NIST Chain 2 pulse
+used for the draw: pulse 1924372 at `2026-09-02T22:16:00.000Z`.
