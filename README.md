@@ -85,9 +85,19 @@ outside custodian has accepted the applicable role.
 
 Release `v0.1.0` is the initial recruitment receipt. It predates repository-level
 immutable-release enforcement and must not be described as immutable. GitHub
-immutable releases are enabled for future freezes; a later release will bind
-the complete synthetic candidate, control, analysis, and author-tooling closure
-before any draw.
+immutable releases are enabled for future freezes. The `v0.2.0` release
+candidate binds the complete synthetic candidate identity, split-process
+commitments, interaction budgets, eight-arm registry, prospective analysis,
+author ABI, conformance fixture, and disclosure-safe public verifiers before
+any draw. Its root-free freeze reports zero outside capsules, no selected roots,
+and no observed results.
+
+Outside game authors can test the public interface with Python 3.11 or newer:
+
+```console
+python verify_causal_program_author_jsonl_v1.py causal-program-author-conformance.jsonl
+python verify_causal_program_predraw_freeze_public_v1.py causal-program-external-v1-predraw-freeze.json
+```
 
 The `v0.1.0` source record is private commit
 `004785c41c0e9980193024d7776d27aab4500065`. The public root-free real-software
