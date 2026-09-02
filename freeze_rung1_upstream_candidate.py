@@ -51,7 +51,7 @@ def main() -> None:
         pool_path,
         preflight_path,
         root / "docs/evidence/rung-1-upstream-briefings-v060.json",
-        root / "docs/evidence/rung-1-upstream-successor-environment-preflight-v060.json",
+        root / "docs/evidence/rung-1-upstream-successor-environment-preflight-v070.json",
         root / "scripts/freeze_rung1_upstream_candidate.py",
         root / "scripts/preflight_rung1_execution_environment.py",
         root / "scripts/preflight_rung1_upstream_artifact_pool.py",
@@ -67,7 +67,8 @@ def main() -> None:
         path.relative_to(root).as_posix(): _identity(path) for path in closure_paths
     }
     manifest["upstream_artifact_protocol"] = {
-        "status": "prospective-predraw-candidate-and-control-freeze",
+        "status": "prospective-prerun-retained-draw-candidate-and-control-freeze",
+        "candidate_release": "v0.7.0",
         "claim_boundary": (
             "four-case externally authored challenge cohort only; no draw, model "
             "attempt, result, independent cohort design, or population estimate"
@@ -83,9 +84,9 @@ def main() -> None:
         "planned_raw_attempts": 4,
         "replacement": False,
         "selection": {
-            "release": "v0.6.1",
-            "rule": "first NIST Randomness Beacon 2.0 pulse strictly after immutable v0.6.1 publication",
-            "selection_sha256": None,
+            "release": "v0.6.2",
+            "rule": "retain the exact immutable v0.6.2 draw; no redraw after the pre-agent runtime stop",
+            "selection_sha256": "b940d6fef3972e3918d499118a3c3d096038f8ed29cc65a7691555a3cd4f7e52",
             "replacement": False,
             "no_redraw": True,
         },
@@ -160,8 +161,7 @@ def main() -> None:
             "accepted upstream workflow incumbent",
         ],
         "remaining_steps": [
-            "publish immutable v0.6.1 closure",
-            "bind the first strictly later public NIST pulse without redraw",
+            "publish a successor freeze retaining immutable v0.6.2 selection",
             "execute and retain the complete failure-inclusive paired matrix",
         ],
         "recovery_condition": None,

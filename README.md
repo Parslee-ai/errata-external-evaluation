@@ -207,3 +207,9 @@ candidate prompt or model invocation occurred and no raw attempt was consumed.
 Release v0.6.3 preserves the ledger, stopped decision, and replay. The successor
 retains the exact v0.6.2 draw and normalizes only the stable version line while
 continuing to bind the executable SHA-256.
+
+The prepared v0.7.0 successor retains the immutable v0.6.2 case order and
+changes only runtime-version normalization. Its candidate freeze passes in the
+exact execution environment that rejected v0.6.1, while continuing to bind the
+same executable bytes and SHA-256. No v0.7.0 ledger or run exists before its
+immutable publication.
