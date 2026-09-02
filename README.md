@@ -267,3 +267,6 @@ used for the draw: pulse 1924372 at `2026-09-02T22:16:00.000Z`.
 Immutable release v1.0.2 publishes the pre-inspection custody receipt: two
 distinct, non-nested, non-temporary roots passed fsync/read-back canaries and a
 separate-process reopen check before dataset checkout.
+Immutable release v1.0.3 publishes the complete redacted ranking of the first
+64 of 1,077 tasks. Thirty-seven pass static eligibility; no task statement,
+accepted patch, or hidden test content is disclosed by the receipt.
