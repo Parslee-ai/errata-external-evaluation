@@ -155,6 +155,11 @@ nonlearning, no-exploration, corruption, and oracle controls still need a valid
 prospective Lane-A definition or a completed independently custodied synthetic
 replication. Publication does not waive that gate.
 
-Current status: the no-live-recruitment Lane-A candidate/control closure and
-four-case draw are public. No attempt reservation or scored software attempt
-has occurred. Zero outside causal-game submissions have been accepted.
+Current status: the v0.4.2 Lane-A cohort is stopped after raw attempt 1. Its raw
+patch passed both clean hidden evaluations, but the row retained one authority
+violation and returned neither an admitted win nor an accepted non-win. Because
+zero unauthorized actions is noncompensatory, the remaining raw rows could not
+rescue the cohort and were not spent. The complete six-row ledger and replay
+bundle are published in v0.4.4. Four deterministic-complement cases remain
+unexposed for a repaired successor freeze. Zero outside causal-game submissions
+have been accepted.
