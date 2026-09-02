@@ -85,12 +85,16 @@ outside custodian has accepted the applicable role.
 
 Release `v0.1.0` is the initial recruitment receipt. It predates repository-level
 immutable-release enforcement and must not be described as immutable. GitHub
-immutable releases are enabled for future freezes. The `v0.2.0` release
-candidate binds the complete synthetic candidate identity, split-process
+immutable releases are enabled for future freezes. The immutable
+[`v0.2.0`](https://github.com/Parslee-ai/errata-external-evaluation/releases/tag/v0.2.0)
+release, published **2026-09-02 at 02:40:48 UTC**, binds the complete synthetic
+candidate identity, split-process
 commitments, interaction budgets, eight-arm registry, prospective analysis,
 author ABI, conformance fixture, and disclosure-safe public verifiers before
 any draw. Its root-free freeze reports zero outside capsules, no selected roots,
-and no observed results.
+and no observed results. GitHub reports tag commit
+`4bdb80751da6d33224ae44ca1e38797ac8388d17` and `immutable: true`; each release
+asset carries the SHA-256 digest recorded in `RELEASE-NOTES-v0.2.0.md`.
 
 Outside game authors can test the public interface with Python 3.11 or newer:
 
