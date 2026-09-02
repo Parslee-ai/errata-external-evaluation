@@ -188,3 +188,9 @@ the inert underscore-only boundary. Candidate cognition, authority, budgets,
 thresholds, and the full comparison matrix are unchanged. A new NIST pulse may
 be requested only after v0.6.0 is immutable; at publication there is no draw,
 reservation, model attempt, or result.
+
+The immutable v0.6.0 package was then invalidated before selection because its
+beacon receipt template still named v0.4.2. The only request returned HTTP 404
+before any pulse bytes, leaving no receipt, ranking, reservation, model attempt,
+or result. v0.6.1 corrects only that provenance rule, retains the same pool and
+candidate, and requires a new future pulse after its own immutable publication.

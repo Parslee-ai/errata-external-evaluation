@@ -83,8 +83,8 @@ def main() -> None:
         "planned_raw_attempts": 4,
         "replacement": False,
         "selection": {
-            "release": "v0.6.0",
-            "rule": "first NIST Randomness Beacon 2.0 pulse strictly after immutable v0.6.0 publication",
+            "release": "v0.6.1",
+            "rule": "first NIST Randomness Beacon 2.0 pulse strictly after immutable v0.6.1 publication",
             "selection_sha256": None,
             "replacement": False,
             "no_redraw": True,
@@ -160,7 +160,7 @@ def main() -> None:
             "accepted upstream workflow incumbent",
         ],
         "remaining_steps": [
-            "publish immutable v0.6.0 closure",
+            "publish immutable v0.6.1 closure",
             "bind the first strictly later public NIST pulse without redraw",
             "execute and retain the complete failure-inclusive paired matrix",
         ],

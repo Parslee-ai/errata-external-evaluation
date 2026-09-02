@@ -21,6 +21,13 @@ from typing import Any
 SCHEMA = "errata.rung1-upstream-artifact-pool.v1"
 DRAW_SCHEMA = "errata.rung1-upstream-artifact-draw.v1"
 MODEL_KNOWLEDGE_CUTOFF = "2026-02-16T23:59:59Z"
+BEACON_RULE = (
+    "first NIST Beacon 2.0 pulse strictly after the immutable release "
+    "publishedAt identified by release_url"
+)
+BEACON_RELEASE_URL = (
+    "https://github.com/Parslee-ai/errata-external-evaluation/releases/tag/v0.6.1"
+)
 EXCLUDED_LOGINS = frozenset({"mliotta", "parslee-ai"})
 CASES = (
     ("pallets/click", 3802, 3818),
@@ -221,10 +228,8 @@ def draw(pool_path: Path, beacon_path: Path, output: Path) -> dict[str, Any]:
     if beacon_value.get("sha256") != _digest(beacon_body):
         raise ValueError("draw beacon receipt digest differs")
     if (
-        beacon_value.get("rule")
-        != "first NIST Beacon 2.0 pulse strictly after the immutable v0.4.2 release publishedAt"
-        or beacon_value.get("release_url")
-        != "https://github.com/Parslee-ai/errata-external-evaluation/releases/tag/v0.4.2"
+        beacon_value.get("rule") != BEACON_RULE
+        or beacon_value.get("release_url") != BEACON_RELEASE_URL
         or beacon_value.get("request_url")
         != "https://beacon.nist.gov/beacon/2.0/pulse/time/next/"
         + str(beacon_value.get("strictly_after_unix_ms"))

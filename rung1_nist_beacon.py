@@ -75,7 +75,10 @@ def fetch(
     entropy = bytes.fromhex(str(pulse["outputValue"]))
     body = {
         "schema": SCHEMA,
-        "rule": "first NIST Beacon 2.0 pulse strictly after the immutable v0.4.2 release publishedAt",
+        "rule": (
+            "first NIST Beacon 2.0 pulse strictly after the immutable release "
+            "publishedAt identified by release_url"
+        ),
         "release_url": release_url,
         "strictly_after_unix_ms": strictly_after_ms,
         "request_url": request_url,
