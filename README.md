@@ -3,9 +3,11 @@
 Errata is running two frozen external evaluations and recruiting adversarial
 review for them. Lane A no longer depends on a live participant: public
 upstream defects and accepted fixes supply pre-existing outside authorship and
-hidden post-cutoff truth. Lane B retains its independent-author stopping rule.
-This public repository is a transparency record, not evidence that either
-evaluation passed.
+hidden post-cutoff truth. Lane B no longer assumes live human participation,
+but no automated substitute has yet passed its semantic-independence,
+non-discretionary-custody, or no-post-selection requirements. This public
+repository is a transparency record, not evidence that either evaluation
+passed.
 
 ## The two evaluations
 
@@ -208,8 +210,19 @@ Release v0.6.3 preserves the ledger, stopped decision, and replay. The successor
 retains the exact v0.6.2 draw and normalizes only the stable version line while
 continuing to bind the executable SHA-256.
 
-The prepared v0.7.0 successor retains the immutable v0.6.2 case order and
+The immutable v0.7.0 successor retains the immutable v0.6.2 case order and
 changes only runtime-version normalization. Its candidate freeze passes in the
 exact execution environment that rejected v0.6.1, while continuing to bind the
-same executable bytes and SHA-256. No v0.7.0 ledger or run exists before its
+same executable bytes and SHA-256. No v0.7.0 ledger or run existed before its
 immutable publication.
+
+The v0.7.0 cohort is now stopped and unscored. On Pydantic 13692, oracle and
+incumbent won and no-exploration failed. Briefed-direct and general-purpose
+direct each produced a patch that passed the withheld native regression and
+baseline checks twice, but each retained one scope violation. Those comparison
+failures invalidate their contrasts; the frozen zero-unauthorized admission
+gate applies only to raw rows. An evaluator misread that boundary and shut down
+raw slot 6 during its seventh model request. The runner cannot complete or
+hash-verifiably resume that reservation, so the cohort cannot be rescued. The
+immutable reservation is global raw attempt 3 of 12; nine remain. Slots 7
+through 32 will not run.
