@@ -48,6 +48,12 @@ and binds a new first official NIST Randomness Beacon 2.0 pulse strictly after
 its own immutable GitHub publication, the exact API request, timestamp
 comparison, entropy field, ranking digest, and no-redraw rule.
 
+Release `v0.4.2` was published at `2026-09-02T11:40:21Z`. NIST chain 2
+pulse `1923737` at `2026-09-02T11:41:00Z` was its first strictly later pulse.
+The frozen ranking selected Pydantic 13631 and Click 3458, 3360, and 3449.
+Release `v0.4.3` publishes the canonical pulse receipt and draw before any
+attempt reservation. There is no replacement or redraw.
+
 The immutable
 [`v0.3.0`](https://github.com/Parslee-ai/errata-external-evaluation/releases/tag/v0.3.0)
 release, published **2026-09-02 at 02:50:42 UTC**, supplies the complete
@@ -149,6 +155,6 @@ nonlearning, no-exploration, corruption, and oracle controls still need a valid
 prospective Lane-A definition or a completed independently custodied synthetic
 replication. Publication does not waive that gate.
 
-Current status: the no-live-recruitment Lane-A candidate/control closure is
-publicly frozen, but no beacon, reservation, or scored software attempt has
-occurred. Zero outside causal-game submissions have been accepted.
+Current status: the no-live-recruitment Lane-A candidate/control closure and
+four-case draw are public. No attempt reservation or scored software attempt
+has occurred. Zero outside causal-game submissions have been accepted.
