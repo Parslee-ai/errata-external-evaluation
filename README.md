@@ -89,6 +89,9 @@ protocol.
 Participation does not imply endorsement, coauthorship, or a favorable result.
 Negative results and blockers are retained.
 
+The mutable [external outreach ledger](OUTREACH.md) records distribution beyond
+this repository and keeps reach separate from eligibility or evidence.
+
 ## Frozen record
 
 Recruitment opened on **2026-09-02 at 02:13:33 UTC**. If no outside synthetic
