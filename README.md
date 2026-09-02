@@ -244,3 +244,12 @@ audit, native source/test split, deterministic selection, and requirements-only
 briefings. Both cases and all sixteen rows must execute. This cohort cannot pass
 the 3-of-4 gate; its best possible terminal disposition is the independently
 checkable shortfall of two additional eligible repositories.
+
+The v0.9 execution did not produce an admissible result. Its temporary custody
+root disappeared after twelve completed rows and during slot 13, before a
+replay package was written. No execution ledger or run bytes survived, so all
+console-observed dispositions are excluded and the cohort is stopped unscored.
+Werkzeug raw remains global attempt 4/12; pip raw was never reserved, leaving
+eight attempts. Recovery requires a new fresh-case freeze with durability
+verified before inspection. Immutable release v0.9.2 publishes only this
+custody-loss adjudication; it does not reconstruct missing evidence.
