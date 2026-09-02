@@ -22,6 +22,21 @@ non-exposure, custody, authority, and conflict declarations pass.
 - Initial state: posted successfully; no response or participant accepted at
   ledger creation.
 
+## 2026-09-02 — Awesome Agent Benchmarks
+
+- Venue: [dataanswer/awesome-agent-benchmarks issue 10](https://github.com/dataanswer/awesome-agent-benchmarks/issues/10)
+- Public basis: the repository's contribution instructions explicitly invite
+  new agent-benchmark suggestions through an issue and invite collaboration on
+  agent evaluation.
+- Request: a scope decision on whether Errata is useful as a methodology before
+  results or should wait for independently authored cases, plus mismatch-first
+  review and independent-role interest.
+- Claim boundary: the submission explicitly states zero external cases, zero
+  scored attempts, and zero results, and asks not to be listed as a completed
+  benchmark merely because preparation is immutable.
+- Initial state: issue created successfully; no response, listing decision, or
+  participant accepted at ledger update.
+
 ## Admission accounting
 
 - Eligible outside software authors: 0
