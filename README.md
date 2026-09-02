@@ -94,7 +94,8 @@ author ABI, conformance fixture, and disclosure-safe public verifiers before
 any draw. Its root-free freeze reports zero outside capsules, no selected roots,
 and no observed results. GitHub reports tag commit
 `4bdb80751da6d33224ae44ca1e38797ac8388d17` and `immutable: true`; each release
-asset carries the SHA-256 digest recorded in `RELEASE-NOTES-v0.2.0.md`.
+asset carries the SHA-256 digest recorded in `RELEASE-NOTES-v0.2.0.md` and the
+API receipt is retained in `v0.2.0-release-manifest.json`.
 
 Outside game authors can test the public interface with Python 3.11 or newer:
 
