@@ -214,7 +214,35 @@ def draw(pool_path: Path, beacon_path: Path, output: Path) -> dict[str, Any]:
         raise ValueError("draw output already exists")
     pool = verify(pool_path)
     beacon = beacon_path.read_bytes()
-    beacon_digest = sha256(beacon).hexdigest()
+    beacon_value = json.loads(beacon)
+    if beacon_value.get("schema") != "errata.rung1-nist-beacon-receipt.v1":
+        raise ValueError("draw requires the frozen NIST beacon receipt schema")
+    beacon_body = {key: value for key, value in beacon_value.items() if key != "sha256"}
+    if beacon_value.get("sha256") != _digest(beacon_body):
+        raise ValueError("draw beacon receipt digest differs")
+    if (
+        beacon_value.get("rule")
+        != "first NIST Beacon 2.0 pulse strictly after the immutable v0.4.1 release publishedAt"
+        or beacon_value.get("release_url")
+        != "https://github.com/Parslee-ai/errata-external-evaluation/releases/tag/v0.4.1"
+        or beacon_value.get("request_url")
+        != "https://beacon.nist.gov/beacon/2.0/pulse/time/next/"
+        + str(beacon_value.get("strictly_after_unix_ms"))
+    ):
+        raise ValueError("draw beacon precommitment differs")
+    pulse = beacon_value.get("pulse")
+    if not isinstance(pulse, dict) or not isinstance(pulse.get("outputValue"), str):
+        raise ValueError("draw beacon pulse differs")
+    beacon_entropy = bytes.fromhex(pulse["outputValue"])
+    if len(beacon_entropy) != 64:
+        raise ValueError("draw beacon entropy must contain 512 bits")
+    pulse_ms = int(
+        datetime.fromisoformat(pulse["timeStamp"].replace("Z", "+00:00")).timestamp()
+        * 1000
+    )
+    if pulse_ms <= beacon_value.get("strictly_after_unix_ms", pulse_ms):
+        raise ValueError("draw beacon pulse does not postdate the release")
+    beacon_digest = sha256(beacon_entropy).hexdigest()
     ranked = sorted(
         pool["cases"],
         key=lambda case: sha256(
@@ -225,7 +253,9 @@ def draw(pool_path: Path, beacon_path: Path, output: Path) -> dict[str, Any]:
     body = {
         "schema": DRAW_SCHEMA,
         "pool_sha256": pool["sha256"],
-        "beacon_bytes": len(beacon),
+        "beacon_receipt_bytes": len(beacon),
+        "beacon_receipt_sha256": sha256(beacon).hexdigest(),
+        "beacon_receipt_canonical_sha256": beacon_value["sha256"],
         "beacon_sha256": beacon_digest,
         "selected_case_ids": selected,
     }

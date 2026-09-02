@@ -37,6 +37,13 @@ challenge cohort rather than independent cohort design or a population sample.
 Adversarial reviewers are invited to audit that boundary and the information
 firewall without supplying or holding a case.
 
+`v0.4.0` is retained as an invalid pre-draw freeze because it did not name the
+beacon provider or canonical pulse bytes. No beacon was fetched and no case was
+selected under it. The corrected `v0.4.1` successor binds the first official
+NIST Randomness Beacon 2.0 pulse strictly after its own immutable GitHub
+publication, the exact API request, timestamp comparison, entropy field,
+ranking digest, and no-redraw rule.
+
 The immutable
 [`v0.3.0`](https://github.com/Parslee-ai/errata-external-evaluation/releases/tag/v0.3.0)
 release, published **2026-09-02 at 02:50:42 UTC**, supplies the complete

@@ -57,7 +57,16 @@ candidate, protocol, complete qualified pool, rejected candidates, evaluator
 commands and digests, budgets, and scoring before a beacon round is known.
 Exactly four cases are then selected without replacement by ascending
 `SHA-256(beacon_digest || 0x00 || case_sha256)`, using the first predeclared
-public beacon strictly after the freeze. There is no redraw.
+public beacon strictly after the freeze. The initial immutable `v0.4.0`
+publication left the beacon provider and canonical pulse bytes unspecified and
+is therefore ineligible for a draw. Its successor predeclares the NIST
+Randomness Beacon 2.0: request
+`/pulse/time/next/<v0.4.1-publishedAt-unix-milliseconds>`, require the returned
+pulse timestamp to be strictly later, interpret the 128-hex-character
+`outputValue` as 64 entropy bytes, and set `beacon_digest` to the SHA-256 of
+those bytes. The canonical receipt retains the pulse, signature, certificate
+identifier, request URL, raw-response digest, and immutable-release URL. There
+is no redraw.
 
 Errata selected the repositories and eight-case sampling frame before the
 beacon. The draw prevents discretionary choice among those eight, but it does
@@ -128,6 +137,7 @@ and baseline twice on clean evaluator copies, checks aggregate budgets and
 unauthorized actions, verifies retained custody, and applies the noncompensatory
 3/4 summary. Eight requirements-only briefings are frozen separately from the
 winning patches. The runner has not yet executed a model row or established
-case-semantic control validity. The public candidate/control freeze remains
-open. No beacon may be requested and no raw attempt may be consumed until this
-closure and the analysis rule are in one public content-addressed freeze.
+case-semantic control validity. The corrected public candidate/control freeze
+with the exact future NIST pulse rule remains open. No beacon may be requested
+and no raw attempt may be consumed until that closure and the analysis rule are
+in one public content-addressed freeze.

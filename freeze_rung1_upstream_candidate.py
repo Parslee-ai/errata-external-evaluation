@@ -54,6 +54,7 @@ def main() -> None:
         root / "scripts/freeze_rung1_upstream_candidate.py",
         root / "scripts/preflight_rung1_upstream_artifact_pool.py",
         root / "scripts/run_rung1_upstream_evaluation.py",
+        root / "scripts/rung1_nist_beacon.py",
         root / "scripts/rung1_upstream_artifact_pool.py",
         root / "scripts/rung1_upstream_control_packet.py",
         root / "src/errata/pursue/direct_prompt.py",
@@ -77,6 +78,14 @@ def main() -> None:
         "maximum_raw_attempts": 12,
         "planned_raw_attempts": 4,
         "replacement": False,
+        "beacon": {
+            "release": "v0.4.1",
+            "source": "NIST Randomness Beacon 2.0",
+            "rule": "first pulse returned by /pulse/time/next/<v0.4.1 publishedAt unix milliseconds>",
+            "entropy": "pulse.outputValue interpreted as 64 bytes",
+            "ranking_digest": "SHA-256(entropy)",
+            "no_redraw": True,
+        },
         "network": "none for all workspace actions; provider transport only in isolated cognition process",
         "authority": {
             "local_reversible_workspace_writes": True,
