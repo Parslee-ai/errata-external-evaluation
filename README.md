@@ -77,7 +77,7 @@ rule forbids a discovery claim that depends on exhaustive enumeration, neither
 outside authorship nor an automated custody substitute can make this unchanged
 candidate eligible.
 
-The v0.8.0 package publishes the exact candidate source, a standard-library
+The v0.8.1 package publishes the exact candidate source, a standard-library
 AST verifier, its canonical receipt, and the adjudication. Replacing the
 enumerative learner and executor is the smallest recovery condition, but that
 would create a new candidate identity. No synthetic capsule, draw, model arm,
@@ -225,7 +225,7 @@ hash-verifiably resume that reservation, so the cohort cannot be rescued. The
 immutable reservation is global raw attempt 3 of 12; nine remain. Slots 7
 through 32 will not run.
 
-The independent synthetic lane is closed by the v0.8.0 non-enumeration
+The independent synthetic lane is closed by the v0.8.1 non-enumeration
 blocker. The exact source-bound receipt can be checked from this repository:
 
 ```console

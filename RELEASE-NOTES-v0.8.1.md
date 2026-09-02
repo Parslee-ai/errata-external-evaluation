@@ -1,4 +1,4 @@
-# v0.8.0 — unchanged synthetic candidate structural blocker
+# v0.8.1 — unchanged synthetic candidate structural blocker
 
 This immutable release publishes an independently checkable non-win for the
 synthetic lane. It is not a game result and is not evidence that the North Star
