@@ -179,3 +179,12 @@ reservation on an inert deterministic substitution. The remaining rows were
 not run, and the 3/4 gate is unscored. Release v0.5.1 publishes the stopped
 result and replay. The four disclosed cases are ineligible as fresh successor
 evidence; at most 10 global raw attempts remain.
+
+Release v0.6.0 freezes the no-live-recruitment successor route. Its eight
+eligible cases are public upstream issues and accepted fixes created after the
+frozen model cutoff, never exposed in the two prior candidate attempts, and
+qualified before selection. The v0.5.0 corruption failure is repaired only for
+the inert underscore-only boundary. Candidate cognition, authority, budgets,
+thresholds, and the full comparison matrix are unchanged. A new NIST pulse may
+be requested only after v0.6.0 is immutable; at publication there is no draw,
+reservation, model attempt, or result.

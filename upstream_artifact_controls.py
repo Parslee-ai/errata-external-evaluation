@@ -216,7 +216,10 @@ def _substitution(word: str, salt: bytes) -> str:
             output.append(character)
     replacement = "".join(output)
     if replacement == word:
-        raise AssertionError("semantic substitution was inert")
+        # ``_WORD`` deliberately admits underscore-only Python identifiers.
+        # They contain no character handled by the shifts above, so map the
+        # first byte to a deterministic letter while preserving byte length.
+        replacement = chr(ord("a") + stream[0] % 26) + word[1:]
     return replacement
 
 

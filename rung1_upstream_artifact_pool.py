@@ -23,14 +23,14 @@ DRAW_SCHEMA = "errata.rung1-upstream-artifact-draw.v1"
 MODEL_KNOWLEDGE_CUTOFF = "2026-02-16T23:59:59Z"
 EXCLUDED_LOGINS = frozenset({"mliotta", "parslee-ai"})
 CASES = (
-    ("pallets/flask", 6093, 6096),
-    ("pytest-dev/pytest", 14828, 14829),
-    ("pallets/click", 3449, 3533),
-    ("pallets/click", 3458, 3484),
-    ("pallets/click", 3360, 3434),
-    ("pydantic/pydantic", 13716, 13717),
-    ("pydantic/pydantic", 13713, 13714),
-    ("pydantic/pydantic", 13631, 13632),
+    ("pallets/click", 3802, 3818),
+    ("pallets/click", 3572, 3653),
+    ("pallets/click", 3571, 3769),
+    ("pytest-dev/pytest", 14864, 14865),
+    ("pydantic/pydantic", 13664, 13665),
+    ("pydantic/pydantic", 13692, 13699),
+    ("pydantic/pydantic", 13687, 13691),
+    ("pydantic/pydantic", 13645, 13648),
 )
 
 

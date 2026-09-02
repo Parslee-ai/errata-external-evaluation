@@ -50,9 +50,8 @@ def main() -> None:
         root / "docs/rung-1-upstream-artifact-protocol.md",
         pool_path,
         preflight_path,
-        root / "docs/evidence/rung-1-upstream-briefings.json",
-        root / "docs/evidence/rung-1-upstream-artifact-complement.json",
-        root / "docs/evidence/rung-1-upstream-successor-environment-preflight.json",
+        root / "docs/evidence/rung-1-upstream-briefings-v060.json",
+        root / "docs/evidence/rung-1-upstream-successor-environment-preflight-v060.json",
         root / "scripts/freeze_rung1_upstream_candidate.py",
         root / "scripts/preflight_rung1_execution_environment.py",
         root / "scripts/preflight_rung1_upstream_artifact_pool.py",
@@ -79,12 +78,14 @@ def main() -> None:
         "candidate": "same general-purpose direct prompt and policy on every raw case",
         "primary_cases": 4,
         "maximum_raw_attempts": 12,
+        "prior_global_raw_attempts": 2,
+        "remaining_global_raw_attempts": 10,
         "planned_raw_attempts": 4,
         "replacement": False,
         "selection": {
-            "release": "v0.5.0",
-            "rule": "entire deterministic complement of the immutable v0.4.2 draw",
-            "selection_sha256": "a533e9b234219d5661e17ce2ea5aea4e57e7c414c07724b51be268243ce31dde",
+            "release": "v0.6.0",
+            "rule": "first NIST Randomness Beacon 2.0 pulse strictly after immutable v0.6.0 publication",
+            "selection_sha256": None,
             "replacement": False,
             "no_redraw": True,
         },
@@ -132,6 +133,38 @@ def main() -> None:
             "oracle_headroom": True,
             "all_comparison_rows_retained": True,
         },
+    }
+    manifest["upstream_claim_gate_status"] = {
+        "status": "prospective-predraw-ready",
+        "base_case_capsule_gate_applicability": False,
+        "candidate_identity_boundary": (
+            "gpt-5.6-sol is the provider-documented snapshot ID and is frozen "
+            "exactly; the local manifest cannot hash remote weight bytes and "
+            "Codex does not return a provider attestation in-run"
+        ),
+        "external_authorship": (
+            "public upstream issue reports and accepted fixes created after the "
+            "frozen model cutoff by people outside Errata"
+        ),
+        "truth_custody": (
+            "immutable upstream git objects plus a public content-addressed Errata "
+            "release published before selection"
+        ),
+        "prospectively_defined_controls": [
+            "matched nonlearning activity",
+            "no exploration",
+            "corrupted learned information",
+            "oracle headroom",
+            "briefed without winning action",
+            "strongest same-substrate general-purpose direct",
+            "accepted upstream workflow incumbent",
+        ],
+        "remaining_steps": [
+            "publish immutable v0.6.0 closure",
+            "bind the first strictly later public NIST pulse without redraw",
+            "execute and retain the complete failure-inclusive paired matrix",
+        ],
+        "recovery_condition": None,
     }
     body = {key: value for key, value in manifest.items() if key != "sha256"}
     manifest["sha256"] = sha256(canonical_bytes(body)).hexdigest()
