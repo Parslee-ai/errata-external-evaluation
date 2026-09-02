@@ -1,13 +1,12 @@
 # Errata external North-Star evaluation
 
-Errata is running two frozen external evaluations and recruiting adversarial
-review for them. Lane A no longer depends on a live participant: public
-upstream defects and accepted fixes supply pre-existing outside authorship and
-hidden post-cutoff truth. Lane B no longer assumes live human participation,
-but no automated substitute has yet passed its semantic-independence,
-non-discretionary-custody, or no-post-selection requirements. This public
-repository is a transparency record, not evidence that either evaluation
-passed.
+Errata is running a real-software evaluation and preserving the terminal
+adjudication of its synthetic lane. Lane A no longer depends on a live
+participant: public upstream defects and accepted fixes supply pre-existing
+outside authorship and hidden post-cutoff truth. Lane B is now closed by a
+publicly checkable structural non-win: the unchanged candidate depends on
+exhaustive enumeration prohibited by the fixed admission rule. This public
+repository is a transparency record, not evidence that the North Star passed.
 
 ## The two evaluations
 
@@ -71,19 +70,18 @@ GitHub reports tag commit `5751c5ebdfb8a0de78a0768252552a72652d6e92` and
 
 ### 2. Independent synthetic replication
 
-Outside authors will build causal games against a public byte/turn interface
-without seeing the candidate implementation or its development traces. A
-separate outside custodian will hold sealed game, evaluator, oracle, and draw
-material. The candidate learner and executor run in separate restricted
-processes.
+This lane ends before a game draw in a correct structural non-win. The frozen
+candidate enumerates every bounded practice action sequence, five Cartesian
+layers of causal hypotheses, and joint executor states. Because the North-Star
+rule forbids a discovery claim that depends on exhaustive enumeration, neither
+outside authorship nor an automated custody substitute can make this unchanged
+candidate eligible.
 
-The frozen comparison includes informative exploration, exactly matched
-noninformative activity, no exploration, valid semantic corruption, oracle
-headroom, the same system briefed without a winning action, the strongest
-same-information general-purpose direct arm, and the declared incumbent.
-Authors must prove that decision-relevant exhaustive enumeration is impossible
-within the interaction budget. A large irrelevant hidden state space does not
-qualify.
+The v0.8.0 package publishes the exact candidate source, a standard-library
+AST verifier, its canonical receipt, and the adjudication. Replacing the
+enumerative learner and executor is the smallest recovery condition, but that
+would create a new candidate identity. No synthetic capsule, draw, model arm,
+or new game family should be run for this candidate.
 
 ## Independence and custody
 
@@ -120,10 +118,10 @@ this repository and keeps reach separate from eligibility or evidence.
 
 ## Frozen record
 
-Recruitment opened on **2026-09-02 at 02:13:33 UTC**. If no outside synthetic
-author participates by **2026-10-14 at 02:13:33 UTC**, lack of participation is
-the predeclared public blocker. No draw or scored attempt may begin until an
-outside custodian has accepted the applicable role.
+Recruitment opened on **2026-09-02 at 02:13:33 UTC**. Its six-week
+no-participation condition is superseded for the unchanged synthetic candidate
+by the earlier, stronger algorithmic blocker above. No draw or scored synthetic
+attempt may begin under that candidate identity.
 
 Release `v0.1.0` is the initial recruitment receipt. It predates repository-level
 immutable-release enforcement and must not be described as immutable. GitHub
@@ -226,3 +224,15 @@ raw slot 6 during its seventh model request. The runner cannot complete or
 hash-verifiably resume that reservation, so the cohort cannot be rescued. The
 immutable reservation is global raw attempt 3 of 12; nine remain. Slots 7
 through 32 will not run.
+
+The independent synthetic lane is closed by the v0.8.0 non-enumeration
+blocker. The exact source-bound receipt can be checked from this repository:
+
+```console
+PYTHONPATH=src python3 scripts/audit_causal_program_nonenumeration_blocker.py \
+  --verify docs/evidence/causal-program-nonenumeration-blocker-v0.json
+```
+
+This is not a synthetic capability result and does not complete the North
+Star. Completion still requires a qualifying 3/4 Lane-A real-software result
+with zero unauthorized actions and complete deterministic replay.
