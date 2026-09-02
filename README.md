@@ -1,9 +1,11 @@
 # Errata external North-Star evaluation
 
-Errata is recruiting independent software-situation authors, causal-game
-authors, custodians, adjudicators, and adversarial reviewers for two frozen
-external evaluations. This public repository is a recruitment and transparency
-record. It is not evidence that either evaluation passed.
+Errata is running two frozen external evaluations and recruiting adversarial
+review for them. Lane A no longer depends on a live participant: public
+upstream defects and accepted fixes supply pre-existing outside authorship and
+hidden post-cutoff truth. Lane B retains its independent-author stopping rule.
+This public repository is a transparency record, not evidence that either
+evaluation passed.
 
 ## The two evaluations
 
@@ -22,13 +24,18 @@ smallest recovery condition. Every run must stay inside its authority and
 frozen budget, retain complete replay material, and produce zero unauthorized
 actions. At most twelve frozen candidate attempts may be consumed.
 
-We need:
+The immutable `v0.4.0` release freezes a no-live-recruitment successor. Eight
+public upstream issue/fix pairs postdate the model cutoff and pass native
+source/test-split preflight. A future public beacon selects four only after the
+candidate, controls, pool, briefings, evaluator, budgets, replay, and analysis
+are frozen. The agent process receives only the issue and pre-fix workspace;
+the later pull request, regression additions, gold implementation, other cases,
+and evaluator remain outside it.
 
-- situation authors who can seal an unfamiliar real software case;
-- a custodian who can hold the case, hidden native outcome checks, authority
-  charter, rollback conditions, and non-win truth oracle; and
-- adjudicators who can assess outcome causality, unauthorized action,
-  preservation, perturbation survival, and the accuracy of any non-win.
+Errata selected the eight-case frame, so this is an externally authored
+challenge cohort rather than independent cohort design or a population sample.
+Adversarial reviewers are invited to audit that boundary and the information
+firewall without supplying or holding a case.
 
 The immutable
 [`v0.3.0`](https://github.com/Parslee-ai/errata-external-evaluation/releases/tag/v0.3.0)
@@ -131,5 +138,6 @@ nonlearning, no-exploration, corruption, and oracle controls still need a valid
 prospective Lane-A definition or a completed independently custodied synthetic
 replication. Publication does not waive that gate.
 
-Current status: preparation only; zero external software attempts consumed and
-zero outside causal-game submissions accepted.
+Current status: the no-live-recruitment Lane-A candidate/control closure is
+publicly frozen, but no beacon, reservation, or scored software attempt has
+occurred. Zero outside causal-game submissions have been accepted.
