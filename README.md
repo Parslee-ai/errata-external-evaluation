@@ -200,3 +200,10 @@ The immutable v0.6.1 package was followed by NIST chain 2 pulse `1923983` at
 pytest 14864, and Pydantic 13687. Release v0.6.2 publishes the receipt and draw
 before any v0.6.1 reservation or model attempt. No replacement or redraw is
 permitted.
+
+The v0.6.1 execution stopped before slot 3 reservation on incidental runtime
+version noise. Only the first case's oracle and incumbent rows completed; no
+candidate prompt or model invocation occurred and no raw attempt was consumed.
+Release v0.6.3 preserves the ledger, stopped decision, and replay. The successor
+retains the exact v0.6.2 draw and normalizes only the stable version line while
+continuing to bind the executable SHA-256.
