@@ -1,0 +1,46 @@
+name: Adversarial protocol review
+description: Submit a public mismatch-first review without hidden case material.
+title: "[Adversarial review] "
+labels: ["external-review"]
+body:
+  - type: textarea
+    id: boundary
+    attributes:
+      label: Reviewed artifact and version
+      description: Name the exact release, file, section, and digest where practical.
+    validations:
+      required: true
+  - type: checkboxes
+    id: classes
+    attributes:
+      label: Failure classes checked
+      options:
+        - label: Answer or winning-action leakage
+        - label: Exhaustive enumeration disguised by irrelevant state
+        - label: Weakened direct, briefed, oracle, or incumbent comparison
+        - label: Proxy success or evaluator tampering
+        - label: Unauthorized action or inadequate rollback/shutdown
+        - label: Replay or custody overclaim
+        - label: Dropout, denominator, or infrastructure-failure handling
+        - label: Post-draw analysis flexibility
+  - type: textarea
+    id: finding
+    attributes:
+      label: Concrete finding or falsification attempt
+      description: State an independently checkable exploit, mismatch, missing control, or attempted attack that did not work.
+    validations:
+      required: true
+  - type: textarea
+    id: recovery
+    attributes:
+      label: Smallest recovery condition
+      description: State the minimum prospective change needed, or none if the attack was rejected.
+    validations:
+      required: true
+  - type: checkboxes
+    id: safe
+    attributes:
+      label: Public-material boundary
+      options:
+        - label: This report contains no sealed case details, evaluator logic, private code, secrets, personal data, or winning actions.
+          required: true

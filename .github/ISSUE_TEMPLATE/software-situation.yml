@@ -24,9 +24,20 @@ body:
   - type: checkboxes
     id: exposure
     attributes:
-      label: Candidate exposure
+      label: Scored-author eligibility
       options:
-        - label: I have not seen the Errata pursuit agent implementation, prompts, or development traces, or I will disclose any exposure before participating.
+        - label: I have not seen the Errata pursuit agent implementation, prompts, or development traces.
+          required: true
+        - label: I am not the candidate developer, case custodian, or outcome adjudicator for this case.
+          required: true
+        - label: I have authority to offer the proposed repository or contained system for evaluation and will disclose its license and any restrictions before transfer.
           required: true
         - label: I will not post hidden case material, evaluator logic, secrets, or winning actions in this public issue.
           required: true
+  - type: textarea
+    id: conflicts
+    attributes:
+      label: Affiliations and conflicts
+      description: List relevant employment, funding, prior collaboration with Parslee AI or Errata contributors, and tools or models used. Write none if none.
+    validations:
+      required: true

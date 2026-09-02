@@ -65,8 +65,13 @@ time before a sealed run begins.
 Open an issue in this repository stating the role you can take: software author,
 game author, custodian, adjudicator, or adversarial reviewer. Do not post hidden
 case details, winning actions, evaluator logic, secrets, or private repository
-content in a public issue. A custody channel will be established before any
-sealed material is transferred.
+content in a public issue. Read [PARTICIPATION.md](PARTICIPATION.md) before
+volunteering and [CUSTODY.md](CUSTODY.md) before proposing a transfer.
+
+No sealed material is currently accepted. An eligible outside custodian—not
+the candidate developers—must first publish and control the encrypted channel,
+keys, receipts, retention policy, and breach procedure described in the custody
+protocol.
 
 Participation does not imply endorsement, coauthorship, or a favorable result.
 Negative results and blockers are retained.
@@ -78,7 +83,13 @@ author participates by **2026-10-14 at 02:13:33 UTC**, lack of participation is
 the predeclared public blocker. No draw or scored attempt may begin until an
 outside custodian has accepted the applicable role.
 
-The source record is private commit
+Release `v0.1.0` is the initial recruitment receipt. It predates repository-level
+immutable-release enforcement and must not be described as immutable. GitHub
+immutable releases are enabled for future freezes; a later release will bind
+the complete synthetic candidate, control, analysis, and author-tooling closure
+before any draw.
+
+The `v0.1.0` source record is private commit
 `004785c41c0e9980193024d7776d27aab4500065`. The public root-free real-software
 manifest has embedded canonical digest
 `88825d030990807615b4b2431fcf50eca0d79e1898724c5a4559b08138817105`;

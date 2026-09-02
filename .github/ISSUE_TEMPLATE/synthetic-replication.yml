@@ -24,11 +24,20 @@ body:
   - type: checkboxes
     id: exposure
     attributes:
-      label: Candidate exposure
+      label: Scored-author eligibility
       options:
-        - label: I have not seen the candidate implementation, prompts, development games, or traces, or I will disclose any exposure before participating.
+        - label: I have not seen the candidate implementation, prompts, development games, or traces.
           required: true
-        - label: I can keep sealed material outside the candidate developers' custody until closure.
+        - label: I am not the candidate developer or proposed custodian for my authored capsule.
+          required: true
+        - label: I have authority to license or submit every authored component under the published participation terms.
           required: true
         - label: I will not post hidden material, evaluator logic, secrets, or winning actions in this public issue.
           required: true
+  - type: textarea
+    id: conflicts
+    attributes:
+      label: Affiliations and conflicts
+      description: List relevant employment, funding, prior collaboration with Parslee AI or Errata contributors, and tools, models, prompts, or collaborators used. Write none if none.
+    validations:
+      required: true
