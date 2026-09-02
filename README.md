@@ -164,9 +164,18 @@ bundle are published in v0.4.4. Four deterministic-complement cases remain
 unexposed for a repaired successor freeze. Zero outside causal-game submissions
 have been accepted.
 
-The repaired successor is now frozen as v0.5.0. It uses the entire deterministic
+The repaired successor was frozen as v0.5.0. It uses the entire deterministic
 complement—Flask 6093, pytest 14828, Pydantic 13716, and Pydantic 13713—with no
 second draw or discretionary subsampling. Before the freeze, a case-free
 preflight completed one fixed cognition request and one credential-free Python
 unittest inside the actual command containment. No successor ledger reservation
 or scored attempt existed at publication.
+
+That cohort is now stopped after seven completed Flask rows and global raw
+attempt 2. Every completed row recorded zero unauthorized actions and complete
+replay, but the raw row did not achieve the hidden outcome or an accepted
+non-win. The frozen corrupted-information adapter then failed before slot 8
+reservation on an inert deterministic substitution. The remaining rows were
+not run, and the 3/4 gate is unscored. Release v0.5.1 publishes the stopped
+result and replay. The four disclosed cases are ineligible as fresh successor
+evidence; at most 10 global raw attempts remain.
