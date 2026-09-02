@@ -264,3 +264,6 @@ result; fewer than four independently gold-preflighted fresh repositories stops
 as a public pool blocker without consuming an attempt.
 Immutable release v1.0.1 publishes the exact post-v1.0.0 NIST Chain 2 pulse
 used for the draw: pulse 1924372 at `2026-09-02T22:16:00.000Z`.
+Immutable release v1.0.2 publishes the pre-inspection custody receipt: two
+distinct, non-nested, non-temporary roots passed fsync/read-back canaries and a
+separate-process reopen check before dataset checkout.
