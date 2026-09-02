@@ -1,0 +1,34 @@
+{
+  "assets": [
+    {
+      "name": "CUSTODY.md",
+      "sha256": "f18dba447110afaa6b4f14cd7737319bc867fe91c2a9b0ee5ef159b97e29782e",
+      "size": 2329
+    },
+    {
+      "name": "lane-a-candidate-freeze-v1.json",
+      "sha256": "42bbf78a2e380987d45e380b2cf52614db75fee34f696b87d62eda0ad13fa047",
+      "size": 11164
+    },
+    {
+      "name": "lane-a-first-external-attempt-protocol.md",
+      "sha256": "47e5841b07a6c0f423143774bd6e2c7294bf4f2391dd05759df15c49e4d5603e",
+      "size": 15125
+    },
+    {
+      "name": "lane_a_case_capsule_tool.py",
+      "sha256": "5558089c92b72cb7cae14beef9ac83bafe3197fc2e2e0a0e4c23851e1464109a",
+      "size": 15756
+    },
+    {
+      "name": "PARTICIPATION.md",
+      "sha256": "a16d6b043db2151e5bf13009059471a009f284009108a09e8fcf3b7c7d3e62ec",
+      "size": 2937
+    }
+  ],
+  "immutable": true,
+  "published_at": "2026-09-02T02:50:42Z",
+  "release": "v0.3.0",
+  "schema": "errata.external-evaluation.release-manifest.v1",
+  "tag_commit": "5751c5ebdfb8a0de78a0768252552a72652d6e92"
+}

@@ -30,12 +30,18 @@ We need:
 - adjudicators who can assess outcome causality, unauthorized action,
   preservation, perturbation survival, and the accuracy of any non-win.
 
-The `v0.3.0` release candidate supplies the complete candidate freeze, updated
+The immutable
+[`v0.3.0`](https://github.com/Parslee-ai/errata-external-evaluation/releases/tag/v0.3.0)
+release, published **2026-09-02 at 02:50:42 UTC**, supplies the complete
+candidate freeze, updated
 eight-arm protocol, and a standard-library-only capsule tool. It lets an outside
 custodian commit all 22 hidden artifact roles without disclosing paths or bytes
 to candidate developers. The manifest deliberately reports
 `preparation-not-run-ready`: four independent capsules and semantically
 validated executable adapters are still required before any attempt.
+GitHub reports tag commit `5751c5ebdfb8a0de78a0768252552a72652d6e92` and
+`immutable: true`; the API receipt is retained in
+`v0.3.0-release-manifest.json`.
 
 ### 2. Independent synthetic replication
 
