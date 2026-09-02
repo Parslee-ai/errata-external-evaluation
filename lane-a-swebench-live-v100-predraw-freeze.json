@@ -1,0 +1,90 @@
+{
+  "attempt_accounting": {
+    "planned_raw_attempts": 4,
+    "prior_consumed_raw_attempts": 4,
+    "remaining_after_complete_reservation": 4,
+    "remaining_before_draw": 8
+  },
+  "authority": {
+    "external_effects": false,
+    "git_history_mutation": false,
+    "local_reversible_workspace_actions": true,
+    "network": false,
+    "outside_workspace": false,
+    "secrets": false,
+    "zero_unauthorized_required": true
+  },
+  "candidate": {
+    "codex_binary_sha256": "e642db09ae422ea96f043247f9df7f8936a1fba123cd9079752723a517311c9c",
+    "codex_version": "codex-cli 0.152.0",
+    "command": [
+      "codex",
+      "exec",
+      "--json",
+      "--ephemeral",
+      "--ignore-user-config",
+      "--ignore-rules",
+      "--model",
+      "gpt-5.6-sol",
+      "--sandbox",
+      "workspace-write",
+      "--output-schema",
+      "<frozen-schema>",
+      "--cd",
+      "<fresh-workspace>",
+      "-"
+    ],
+    "general_prompt_sha256": "ba5e6df10ded3516a279dcab5bc795efaf120316dc83587a4ef61c92d70940e0",
+    "model_identity": "gpt-5.6-sol",
+    "terminal_schema_sha256": "bb918da50ea5f9c8f2a1423850a97e6903f1c4eb5908417d258b7350837381d6",
+    "v090_candidate_asset_sha256": "2e1cfc87b8bd6984af43fd61187a82a537b6feb56f564d2ef444b9de5222e931",
+    "v090_candidate_internal_sha256": "99f2d0865e6f364d60449b54894cad1ae5fa58b54aa9491f945dd56f8569d09e",
+    "v090_candidate_release": "https://github.com/Parslee-ai/errata-external-evaluation/releases/tag/v0.9.0"
+  },
+  "controls": [
+    "oracle-gold",
+    "accepted-patch-incumbent",
+    "no-exploration",
+    "requirements-briefed-without-winning-action",
+    "strongest-general-purpose-identity",
+    "matched-nonlearning",
+    "semantic-corruption"
+  ],
+  "custody": {
+    "both_roots_verified_before_dataset_checkout": true,
+    "cross_process_reopen_required": true,
+    "exact_replay_required": true,
+    "non_nested_non_temporary_roots": 2,
+    "retry_or_replacement": false,
+    "root_free_until_preflight": true,
+    "write_and_fsync_canary_required": true
+  },
+  "draw": {
+    "eligible_cases_required": 4,
+    "issue_created_at_not_before": "2026-02-17T00:00:00Z",
+    "maximum_ranked_rows_scanned": 64,
+    "nist_chain": 2,
+    "nist_pulse_rule": "first pulse with timestamp strictly later than GitHub release published_at",
+    "prior_errata_instances_and_repositories_excluded": true,
+    "ranking": "SHA256(pulse_output || 0x00 || UTF8(instance_id)), then UTF8 instance_id",
+    "replacement": false,
+    "unique_repository": true
+  },
+  "external_inputs": {
+    "dataset": "SWE-bench-Live/MultiLang",
+    "dataset_git_revision": "dc443bc2574733152ba51b4d4457ccd38921613b",
+    "evaluator_git_revision": "3225e471b7540a2c2b703c7bfbed80571f653f3b",
+    "evaluator_repository": "https://github.com/microsoft/SWE-bench-Live"
+  },
+  "limits_per_agent_row": {
+    "maximum_added_lines": 5000,
+    "maximum_changed_files": 50,
+    "maximum_deleted_lines": 5000,
+    "maximum_elapsed_seconds": 10800,
+    "maximum_tool_or_action_events": 320
+  },
+  "protocol_sha256": "b3f537bec666b2def66de7f74d51060627958e4a06a33601f75df73f6eb560a1",
+  "schema": "errata.lane-a-swebench-live-predraw-freeze.v1",
+  "sha256": "e4033e9a1aba2fbf9f7a2d49376d70d369b98db3dccf0a6ce86d3110480101d8",
+  "status": "prospective-prepublication-preinspection"
+}

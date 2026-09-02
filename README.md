@@ -253,3 +253,12 @@ Werkzeug raw remains global attempt 4/12; pip raw was never reserved, leaving
 eight attempts. Recovery requires a new fresh-case freeze with durability
 verified before inspection. Immutable release v0.9.2 publishes only this
 custody-loss adjudication; it does not reconstruct missing evidence.
+
+Lane-A v1.0 removes the need for a live evaluator or recruited case author.
+Its prospective freeze binds the August 2026 SWE-bench-Live MultiLang dataset,
+the official evaluator revision, one general-purpose Codex agent, deterministic
+authority and budgets, dual durable custody, and a draw from the first NIST
+Beacon pulse after immutable release v1.0.0. No task content may be inspected
+before publication and the post-release draw. This is preparation, not a
+result; fewer than four independently gold-preflighted fresh repositories stops
+as a public pool blocker without consuming an attempt.
