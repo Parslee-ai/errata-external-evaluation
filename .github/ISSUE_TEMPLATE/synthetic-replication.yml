@@ -1,0 +1,34 @@
+name: Synthetic-replication participation
+description: Volunteer as an outside causal-game author, custodian, or reviewer.
+title: "[Synthetic replication] "
+labels: ["synthetic-replication"]
+body:
+  - type: dropdown
+    id: role
+    attributes:
+      label: Role
+      options:
+        - Outside game author
+        - Independent custodian
+        - Independent renderer or replay verifier
+        - Adversarial reviewer
+    validations:
+      required: true
+  - type: textarea
+    id: independence
+    attributes:
+      label: Independence and relevant experience
+      description: Do not disclose hidden game mechanics, evaluator logic, or oracle material.
+    validations:
+      required: true
+  - type: checkboxes
+    id: exposure
+    attributes:
+      label: Candidate exposure
+      options:
+        - label: I have not seen the candidate implementation, prompts, development games, or traces, or I will disclose any exposure before participating.
+          required: true
+        - label: I can keep sealed material outside the candidate developers' custody until closure.
+          required: true
+        - label: I will not post hidden material, evaluator logic, secrets, or winning actions in this public issue.
+          required: true

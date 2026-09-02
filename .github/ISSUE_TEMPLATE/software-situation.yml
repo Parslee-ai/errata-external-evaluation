@@ -1,0 +1,32 @@
+name: Real-software participation
+description: Volunteer as a situation author, custodian, adjudicator, or reviewer.
+title: "[Real software] "
+labels: ["real-software"]
+body:
+  - type: dropdown
+    id: role
+    attributes:
+      label: Role
+      options:
+        - Situation author
+        - Independent custodian
+        - Outcome or non-win adjudicator
+        - Adversarial reviewer
+    validations:
+      required: true
+  - type: textarea
+    id: independence
+    attributes:
+      label: Independence and relevant experience
+      description: Do not disclose hidden case details or private repository content.
+    validations:
+      required: true
+  - type: checkboxes
+    id: exposure
+    attributes:
+      label: Candidate exposure
+      options:
+        - label: I have not seen the Errata pursuit agent implementation, prompts, or development traces, or I will disclose any exposure before participating.
+          required: true
+        - label: I will not post hidden case material, evaluator logic, secrets, or winning actions in this public issue.
+          required: true
